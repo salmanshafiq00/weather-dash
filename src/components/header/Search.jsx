@@ -1,4 +1,4 @@
-import SearchImg from '../../assets/search.svg';
+import SearchIcon from '../../assets/search.svg';
 
 function Search() {
   return (
@@ -7,7 +7,7 @@ function Search() {
         <input className="bg-transparent  placeholder:text-white text-white w-full text-xs md:text-base outline-none border-none"
           type="search" placeholder="Search Location" required />
         <button type="submit">
-          <img src={SearchImg} alt="Search" />
+          <img src={SearchIcon} alt="Search" />
         </button>
       </div>
     </form>
