@@ -9,3 +9,10 @@
   --container-center: true;
   --container-padding: 1.25rem;
 }
+
+@layer {
+  .container {
+    @apply mx-auto;
+    padding: 1.25rem;
+  }
+}
