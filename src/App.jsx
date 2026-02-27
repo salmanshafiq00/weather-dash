@@ -1,11 +1,14 @@
 import './App.css';
 import Page from './components/Page';
+import { WeatherProvider } from './providers';
 
 function App() {
 
   return (
     <>
-      <Page />
+      <WeatherProvider>
+        <Page />
+      </WeatherProvider>
     </>
   )
 }
