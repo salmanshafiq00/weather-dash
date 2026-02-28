@@ -1,5 +1,5 @@
 import { useWeatherContext } from "../../hooks";
-import AddToFavourite from "./AddToFavourite";
+import ToggleFavourite from "./ToggleFavourite";
 import WeatherCondition from "./WeatherCondition";
 import WeatherHeadline from "./WeatherHeadline";
 
@@ -24,7 +24,7 @@ function WeatherBoard() {
             </div>
           )
         }
-        <AddToFavourite />
+        <ToggleFavourite />
         <WeatherHeadline />
         <WeatherCondition />
       </div>
