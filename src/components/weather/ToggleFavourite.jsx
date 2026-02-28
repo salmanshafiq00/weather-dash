@@ -25,7 +25,6 @@ function ToggleFavourite() {
           <span>Add to Favourite</span>
           <img src={isFavourite ? HeartRedIcon : FavouriteIcon} alt="favourite" />
         </button>
-
       </div>
     </div>
   );
