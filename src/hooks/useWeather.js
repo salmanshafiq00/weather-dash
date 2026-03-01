@@ -24,7 +24,6 @@ export default function useWeather() {
   const [error, setError] = useState(null);
   const { location } = useLocationContext();
   useEffect(() => {
-    console.log('useWeather - location changed:', location);
     if (location) {
       const { latitude, longitude } = location;
       fetchWeather(latitude, longitude);
@@ -67,7 +66,7 @@ export default function useWeather() {
     } catch (error) {
       setError(error);
     } finally {
-      setLoading({ loading: false, message: '' });
+      setLoading({ state: false, message: '' });
     }
   };
 

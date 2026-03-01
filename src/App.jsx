@@ -1,5 +1,5 @@
 import './App.css';
-import Page from './components/Page';
+import Page from './Page';
 import { FavouriteProvider, LocationProvider, WeatherProvider } from './providers';
 
 function App() {

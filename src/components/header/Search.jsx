@@ -6,7 +6,7 @@ import useDebounce from '../../hooks/useDebounce';
 
 function Search() {
   const [searchTerm, setSearchTerm] = useState('');
-  const debouncedSearchTerm = useDebounce(searchTerm, 5000);
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
   const { setLocation } = useLocationContext();
 
   useEffect(() => {

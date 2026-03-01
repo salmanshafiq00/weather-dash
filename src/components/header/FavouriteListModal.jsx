@@ -1,7 +1,9 @@
-import { useFavouriteContext } from "../../hooks";
+import { useFavouriteContext, useLocationContext } from "../../hooks";
 
 function FavouriteListModal({ onClose }) {
   const { favourites } = useFavouriteContext();
+  const { setLocation } = useLocationContext();
+
   return (
     <div className="max-w-xs py-4 bg-white rounded-md border-gray-500 absolute right-0 top-16 text-black shadow-lg ">
       <h3 className="text-lg font-bold px-4">Favourite Locations</h3>
@@ -10,7 +12,12 @@ function FavouriteListModal({ onClose }) {
           favourites.length === 0 ? (
             <li className="text-gray-500">No favourite locations added yet.</li>
           ) : favourites.map((fav, index) => (
-            <li onClick={() => onClose()} key={index} className="hover:bg-gray-200">{fav.location}</li>
+            <li onClick={() => onClose()} key={index} className="hover:bg-gray-200">
+              <a onClick={() => {
+                setLocation(fav);
+                onClose();
+              }}>{fav.location}</a>
+            </li>
           ))
         }
       </ul>

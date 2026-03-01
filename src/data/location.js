@@ -4,7 +4,7 @@
 // - latitude: the latitude of the location
 // - longitude: the longitude of the location
 const locations = [
-  { location: 'Dhaka', latitude: 23.8103, longitude: 90.4125 },
+  { location: 'Dhaka', latitude: 23.8041, longitude: 90.4152 },
   { location: 'Rangpur', latitude: 25.7439, longitude: 89.2752 },
   { location: 'Europe', latitude: 54.5260, longitude: 15.2551 },
   { location: 'London', latitude: 51.5074, longitude: -0.1278 },
@@ -71,3 +71,4 @@ const getLocationByName = (name) => {
 }
 
 export { getAllLocations, getLocationByName };
+

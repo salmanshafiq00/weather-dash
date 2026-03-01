@@ -1,6 +1,6 @@
-import Header from "./header/Header";
-import Layout from "./Layout";
-import WeatherBoard from "./weather/WeatherBoard";
+import Header from "./components/header/Header";
+import Layout from "./components/Layout";
+import WeatherBoard from "./components/weather/WeatherBoard";
 
 function Page() {
   return (
@@ -13,5 +13,5 @@ function Page() {
       </main>
     </Layout>
   );
-};
+}
 export default Page;
