@@ -11,20 +11,24 @@ import { useWeatherContext } from '../hooks';
 function Layout({ children }) {
   const { weatherData } = useWeatherContext();
 
-  const climateImage = (() => {
-    switch (weatherData.climate) {
-      case "Rain": return RainyDayImage;
-      case "Clouds": return ScatterdCloudsImage;
-      case "Clear": return ClearSkyImage;
-      case "Snow": return SnowImage;
-      case "Thunder": return ThunderStormImage;
-      case "Fog": return WinterImage;
-      case "Haze": return FewCloudsImage;
-      case "Mist": return MistImage;
-      default: return ClearSkyImage;
-    }
-  })();
+  const defaultBackground = ClearSkyImage;
 
+  const climateImage = weatherData.climate
+    ? (() => {
+      switch (weatherData.climate) {
+        case "Rain": return RainyDayImage;
+        case "Clouds": return ScatterdCloudsImage;
+        case "Clear": return ClearSkyImage;
+        case "Snow": return SnowImage;
+        case "Thunder": return ThunderStormImage;
+        case "Fog": return WinterImage;
+        case "Haze": return FewCloudsImage;
+        case "Mist": return MistImage;
+        default: return ClearSkyImage;
+      }
+    })()
+    : defaultBackground;
+  console.log(climateImage)
   return (
     <div
       style={{ backgroundImage: `url(${climateImage})` }}
